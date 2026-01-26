@@ -250,7 +250,7 @@ esp_err_t http_server_OTA_update_handler(httpd_req_t *req)
 			}
 			else
 			{
-				printf("http_server_OTA_update_handler: Writing to partition subtype %d at offset 0x%x\r\n", update_partition->subtype, update_partition->address);
+				printf("http_server_OTA_update_handler: Writing to partition subtype %d at offset 0x%lu\r\n", update_partition->subtype, update_partition->address);
 			}
 
 			// Write this first part of the data

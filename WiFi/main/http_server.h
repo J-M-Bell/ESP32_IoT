@@ -24,7 +24,6 @@ typedef enum http_server_message
 	HTTP_MSG_OTA_UPDATE_FAILED,
 } http_server_message_e;
 
-#include "portmacro.h"
 /**
  * Structure for the message queue
  */

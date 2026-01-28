@@ -2,6 +2,7 @@
  * Application entry point.
  */
 
+#include "DHT22.h"
 #include "nvs_flash.h"
 
 #include "wifi_app.h"
@@ -19,5 +20,8 @@ void app_main(void)
 
 	// Start Wifi
 	wifi_app_start();
+
+	//Start DHT task
+	DHT22_task_start();
 }
 

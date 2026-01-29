@@ -33,7 +33,7 @@
 
 static const char* TAG = "DHT";
 
-int DHTgpio = 4;				// my default DHT pin = 4
+int DHTgpio = 7;				// my default DHT pin = 4
 float humidity = 0.;
 float temperature = 0.;
 

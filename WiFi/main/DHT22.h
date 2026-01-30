@@ -7,12 +7,13 @@
 #ifndef DHT22_H_  
 #define DHT22_H_
 
-#include <stdbool.h>
 #define DHT_OK 0
 #define DHT_CHECKSUM_ERROR -1
 #define DHT_TIMEOUT_ERROR -2
 
-#define DHT_GPIO			7
+#define DHT_GPIO			15
+
+#include <stdbool.h>
 
 /**
  * Starts DHT22 sensor task

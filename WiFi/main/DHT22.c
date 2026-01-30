@@ -33,7 +33,7 @@
 
 static const char* TAG = "DHT";
 
-int DHTgpio = 7;				// my default DHT pin = 4
+int DHTgpio = 4;				// my default DHT pin = 4
 float humidity = 0.;
 float temperature = 0.;
 
@@ -237,17 +237,17 @@ uint8_t bitInx = 7;
 static void DHT22_task(void *pvParameter)
 {
 	setDHTgpio(DHT_GPIO);
-	printf("Starting DHT task\n\n");
+	printf("Starting DHT task\n\n\n");
 
 	for (;;)
 	{
-//		printf("=== Reading DHT ===\n");
+		printf("=== Reading DHT ===\n");
 		int ret = readDHT();
 
 		errorHandler(ret);
 
-//		printf("Hum %.1f\n", getHumidity());
-//		printf("Tmp %.1f\n", getTemperature());
+		printf("Hum %.1f\n", getHumidity());
+		printf("Tmp %.1f\n", getTemperature());
 
 		// Wait at least 2 seconds before reading again
 		// The interval of the whole process must be more than 2 seconds
